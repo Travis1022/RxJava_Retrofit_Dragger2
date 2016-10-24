@@ -8,21 +8,26 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.rxjavademo.BaseFragment;
 import com.rxjavademo.R;
 import com.rxjavademo.adapter.ElementaryListAdapter;
 import com.rxjavademo.model.ElementaryImage;
+import com.rxjavademo.network.NetWorkCondfig;
 
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnCheckedChanged;
 import rx.Observer;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 /**
- * Created by xuanwei.tian on 2016/10/24.
+ * Created by Travis1022 on 2016/10/24.
  */
 public class ElementaryFragment extends BaseFragment {
 
@@ -55,9 +60,29 @@ public class ElementaryFragment extends BaseFragment {
         }
     };
 
+
     //使用RxJava
     private void search(String key) {
-/*//        mSubscription = */
+        mSubscription = NetWorkCondfig.getElementayApi()
+                .search(key)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(mObserver);
+    }
+
+
+    /**
+     * RadioButton的点击事件
+     */
+    @OnCheckedChanged({R.id.rb_cute, R.id.rb_110, R.id.rb_me, R.id.rb_zb})
+    void onRadioButtonChanged(RadioButton searchRB, boolean checked) {
+        //选中之后重新刷新
+        if (checked) {
+            unSubScribe();
+            mElementaryListAdapter.setImages(null);
+            mLayoutSwipeFresh.setRefreshing(true);
+            search(searchRB.getText().toString());
+        }
     }
 
 

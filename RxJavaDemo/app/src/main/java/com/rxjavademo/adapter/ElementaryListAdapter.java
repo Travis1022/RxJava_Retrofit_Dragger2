@@ -34,9 +34,9 @@ public class ElementaryListAdapter extends RecyclerView.Adapter {
         ElementaryViewHolder eleViewHolder = (ElementaryViewHolder) holder;
         ElementaryImage image = mElementaryImages.get(position);
         //使用图片加载框架 compile 'com.github.bumptech.glide:glide:3.7.0'
-        Glide.with(holder.itemView.getContext()).load(image.urlImg).into(eleViewHolder.mIvShow);
+        Glide.with(holder.itemView.getContext()).load(image.image_url).into(eleViewHolder.mIvShow);
 
-        eleViewHolder.mTvDesc.setText(image.desImg);
+        eleViewHolder.mTvDesc.setText(image.description);
     }
 
     @Override

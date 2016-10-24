@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">RxJavaDemo</string>
+    <string name="title_elementary">基本</string>
+    <string name="title_map">转换（map）</string>
+    <string name="title_zip">压缩（zip）</string>
+    <string name="title_token">Token(flatMap)</string>
+    <string name="title_advanced_token">高级Token</string>
+    <string name="title_cache">缓存（cache）</string>
+
+
 </resources>

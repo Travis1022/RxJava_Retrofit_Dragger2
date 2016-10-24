@@ -7,7 +7,7 @@ import butterknife.OnClick;
 import rx.Subscription;
 
 /**
- * Created by xuanwei.tian on 2016/10/24.
+ * Created by Travis1022 on 2016/10/24.
  */
 public abstract class BaseFragment extends Fragment {
     protected Subscription mSubscription;
@@ -30,7 +30,7 @@ public abstract class BaseFragment extends Fragment {
     /**
      * 解除订阅
      */
-    private void unSubScribe() {
+    protected void unSubScribe() {
         if (mSubscription != null && mSubscription.isUnsubscribed()) {
             mSubscription.unsubscribe();
         }
