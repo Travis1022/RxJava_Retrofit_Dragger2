@@ -4,7 +4,7 @@
 <Button
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/btn_tip"
-    android:layout_width="70dp"
+    android:layout_width="50dp"
     android:layout_height="wrap_content"
     android:text="tips"
     />
