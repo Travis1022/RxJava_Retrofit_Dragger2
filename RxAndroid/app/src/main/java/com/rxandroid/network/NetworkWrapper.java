@@ -35,4 +35,24 @@ public class NetworkWrapper {
     }
 
     //获取库信息
+    public static void getRepoData(final DetailListAdapter adapter, final String userName) {
+        GitHubService gitHubService = ServiceFactory.createServiceFrom(GitHubService.class, GitHubService.ENDPOINT);
+
+        gitHubService.getRepoData(userName)
+                .flatMap(new Func1<GitHubRepo[], Observable<? extends GitHubRepo>>() {
+                    @Override
+                    public Observable<? extends GitHubRepo> call(GitHubRepo[] gitHubRepos) {
+                        return Observable.from(gitHubRepos);
+                    }
+                })
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Action1<GitHubRepo>() {
+                    @Override
+                    public void call(GitHubRepo gitHubRepo) {
+                        adapter.addDetail(gitHubRepo);
+                    }
+                });
+
+    }
 }

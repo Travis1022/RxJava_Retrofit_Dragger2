@@ -28,6 +28,12 @@
         <activity
             android:name=".LambdaActivity"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SafeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".BindingActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

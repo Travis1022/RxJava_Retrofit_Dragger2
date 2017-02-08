@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_simple, R.id.btn_more, R.id.btn_lambda, R.id.btn_network, R.id.btn_safe})
+    @OnClick({R.id.btn_simple, R.id.btn_more, R.id.btn_lambda, R.id.btn_network, R.id.btn_safe, R.id.btn_binding})
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -40,8 +40,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_safe:
                 SafeModule();
                 break;
+            case R.id.btn_binding:
+                BindModule();
+                break;
         }
     }
+
 
     //简单使用
     public void SimpleModule() {
@@ -65,7 +69,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //线程安全
     public void SafeModule() {
+        startActivity(new Intent(this, SafeActivity.class));
+    }
 
+    //Binding RxAndroid
+    private void BindModule() {
+        startActivity(new Intent(this, BindingActivity.class));
     }
 
 

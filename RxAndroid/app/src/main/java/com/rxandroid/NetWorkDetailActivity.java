@@ -1,54 +1,48 @@
 package com.rxandroid;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.rxandroid.network.DetailListAdapter;
 import com.rxandroid.network.NetworkWrapper;
-import com.rxandroid.network.UserListAdapter;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-/**
- * RxAndroid在网络请求上的应用
- * Created by Travis1022 on 2017/2/7.
- */
-public class NetWorkActivity extends AppCompatActivity {
 
+/**
+ * Created by Travis1022 on 2017/2/8.
+ */
+public class NetWorkDetailActivity extends AppCompatActivity {
     @Bind(R.id.rv_show)
     RecyclerView mRvShow;
+    private static final String userNameTag = "user_name";
 
+    public static Intent from(Context context, String username){
+        Intent intent=new Intent(context,NetWorkDetailActivity.class);
+        intent.putExtra(userNameTag,username);
+        return intent;
+    }
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_network);
         ButterKnife.bind(this);
 
-        //设置layout管理器
+        //设置布局
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRvShow.setLayoutManager(layoutManager);
 
-        //设置适配器
-        UserListAdapter userListAdapter = new UserListAdapter(new UserClickCallBack() {
-            @Override
-            public void onItemClicked(String name) {
-                gotoDetailPage(name);
-            }
-        });
-        NetworkWrapper.getUserInfo(userListAdapter);
-        mRvShow.setAdapter(userListAdapter);
-    }
+        //设置Adapter
+        DetailListAdapter adapter = new DetailListAdapter();
+        NetworkWrapper.getRepoData(adapter, getIntent().getStringExtra(userNameTag));
+        mRvShow.setAdapter(adapter);
 
-    private void gotoDetailPage(String name) {
-        startActivity(NetWorkDetailActivity.from(NetWorkActivity.this, name));
-    }
-
-    //点击回调
-    public interface UserClickCallBack {
-        void onItemClicked(String name);
     }
 }

@@ -15,4 +15,8 @@ public interface GitHubService {
     @GET("/users/{user}")
     Observable<GitHubUser> getUserData(@Path("user") String user);
 
+
+    // 获取库：详细信息
+    @GET("/users/{user}/repos")
+    Observable<GitHubRepo[]> getRepoData(@Path("user") String user);
 }

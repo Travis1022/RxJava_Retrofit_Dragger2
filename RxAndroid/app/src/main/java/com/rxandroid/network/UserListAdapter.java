@@ -66,6 +66,12 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserLi
         public UserListViewHolder(View itemView, NetWorkActivity.UserClickCallBack clickCallBack) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    clickCallBack.onItemClicked(mTvSecondName.getText().toString());
+                }
+            });
         }
 
         //绑定数据

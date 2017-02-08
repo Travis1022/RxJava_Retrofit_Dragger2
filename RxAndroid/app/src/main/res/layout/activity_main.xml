@@ -40,6 +40,7 @@
         android:text="线程安全"/>
 
     <Button
+        android:id="@+id/btn_binding"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="RxBinding"/>
