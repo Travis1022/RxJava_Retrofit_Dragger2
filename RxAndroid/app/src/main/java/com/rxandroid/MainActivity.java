@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //网络使用
     public void NetworkModule() {
-
+        startActivity(new Intent(this, NetWorkActivity.class));
     }
 
     //线程安全

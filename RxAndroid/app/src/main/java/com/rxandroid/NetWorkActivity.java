@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.rxandroid.network.NetworkWrapper;
 import com.rxandroid.network.UserListAdapter;
 
 import butterknife.Bind;
@@ -38,10 +39,12 @@ public class NetWorkActivity extends AppCompatActivity {
                 gotoDetailPage(name);
             }
         });
+        NetworkWrapper.getUserInfo(userListAdapter);
+        mRvShow.setAdapter(userListAdapter);
     }
 
     private void gotoDetailPage(String name) {
-        //startActivity(NetWorkDetailActivity.from());
+        //startActivity(NetWorkDetailActivity);
     }
 
     //点击回调
