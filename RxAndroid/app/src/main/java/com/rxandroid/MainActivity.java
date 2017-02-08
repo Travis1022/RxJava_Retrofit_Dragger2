@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //Lambda使用
     public void LambdaModule() {
-
+        startActivity(new Intent(this, LambdaActivity.class));
     }
 
     //网络使用
