@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //更多使用
     public void MoreModule() {
-        startActivity(new Intent(this,MoreActivity.class));
+        startActivity(new Intent(this, MoreActivity.class));
     }
 
     //Lambda使用
