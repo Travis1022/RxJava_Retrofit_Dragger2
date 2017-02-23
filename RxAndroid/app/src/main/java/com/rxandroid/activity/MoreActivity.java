@@ -1,10 +1,12 @@
-package com.rxandroid;
+package com.rxandroid.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.rxandroid.R;
 
 import java.util.Arrays;
 import java.util.List;

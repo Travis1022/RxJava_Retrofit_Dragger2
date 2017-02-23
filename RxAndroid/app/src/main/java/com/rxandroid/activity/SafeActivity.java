@@ -1,9 +1,10 @@
-package com.rxandroid;
+package com.rxandroid.activity;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.rxandroid.R;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
 import java.util.concurrent.TimeUnit;

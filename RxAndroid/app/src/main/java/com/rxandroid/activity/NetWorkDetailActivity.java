@@ -1,4 +1,4 @@
-package com.rxandroid;
+package com.rxandroid.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.rxandroid.R;
 import com.rxandroid.network.DetailListAdapter;
 import com.rxandroid.network.NetworkWrapper;
 

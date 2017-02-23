@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:orientation="vertical">
+              android:orientation="vertical"
+              app:layout_behavior="@string/appbar_scrolling_view_behavior"
+              tools:context=".activity.BindingActivity"
+              tools:showIn="@layout/activity_binding">
 
     <TextView
         android:layout_width="match_parent"
@@ -10,9 +15,10 @@
         android:text="常规方式"/>
 
     <EditText
-        android:id="@+id/et_standard"
+        android:id="@+id/rxbinding_et_usual_approach"
         android:layout_width="match_parent"
-        android:layout_height="50dp"/>
+        android:layout_height="48dp"
+        android:hint="@null"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -20,13 +26,13 @@
         android:text="响应方式"/>
 
     <EditText
-        android:id="@+id/et_click"
+        android:id="@+id/rxbinding_et_reactive_approach"
         android:layout_width="match_parent"
-        android:layout_height="50dp"/>
-
+        android:layout_height="48dp"
+        android:hint="@null"/>
 
     <TextView
-        android:id="@+id/tv_binding_show"
+        android:id="@+id/rxbinding_tv_show"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

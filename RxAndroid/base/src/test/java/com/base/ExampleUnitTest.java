@@ -1,4 +1,4 @@
-package com.rxandroid;
+package com.base;
 
 import org.junit.Test;
 

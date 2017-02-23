@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.rxandroid.NetWorkActivity;
+import com.rxandroid.activity.NetWorkActivity;
 import com.rxandroid.R;
 import com.squareup.picasso.Picasso;
 
