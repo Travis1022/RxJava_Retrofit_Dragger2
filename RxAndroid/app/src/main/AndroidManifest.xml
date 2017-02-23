@@ -40,6 +40,9 @@
             android:name=".activity.NetWorkDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activity.LearnAndroidActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

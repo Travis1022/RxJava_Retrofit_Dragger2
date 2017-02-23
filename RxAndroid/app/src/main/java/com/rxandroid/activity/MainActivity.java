@@ -23,7 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_simple, R.id.btn_more, R.id.btn_lambda, R.id.btn_network, R.id.btn_safe, R.id.btn_binding})
+    @OnClick({R.id.btn_simple, R.id.btn_more, R.id.btn_lambda,
+            R.id.btn_network, R.id.btn_safe, R.id.btn_binding,
+            R.id.btn_android})
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -45,32 +47,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_binding:
                 BindModule();
                 break;
+            case R.id.btn_android:
+                LearnAndroid();
+                break;
         }
     }
 
 
     //简单使用
-    public void SimpleModule() {
+    private void SimpleModule() {
         startActivity(new Intent(this, SimpleActivity.class));
     }
 
     //更多使用
-    public void MoreModule() {
+    private void MoreModule() {
         startActivity(new Intent(this, MoreActivity.class));
     }
 
     //Lambda使用
-    public void LambdaModule() {
+    private void LambdaModule() {
         startActivity(new Intent(this, LambdaActivity.class));
     }
 
     //网络使用
-    public void NetworkModule() {
+    private void NetworkModule() {
         startActivity(new Intent(this, NetWorkActivity.class));
     }
 
     //线程安全
-    public void SafeModule() {
+    private void SafeModule() {
         startActivity(new Intent(this, SafeActivity.class));
     }
 
@@ -79,5 +84,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(new Intent(this, BindingActivity.class));
     }
 
+    //android基础知识
+    private void LearnAndroid() {
+        startActivity(new Intent(this, LearnAndroidActivity.class));
+    }
 
 }

@@ -134,7 +134,6 @@ public class ActivityManager {
             android.app.ActivityManager activityMgr = (android.app.ActivityManager) context
                     .getSystemService(Context.ACTIVITY_SERVICE);
             activityMgr.killBackgroundProcesses(context.getPackageName());
-//            android.os.Process.killProcess(android.os.Process.myPid());
             System.exit(0);
         } catch (Exception e) {
             e.printStackTrace();
