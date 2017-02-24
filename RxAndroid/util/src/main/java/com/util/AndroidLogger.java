@@ -10,7 +10,7 @@ import org.json.JSONObject;
 /**
  * AndroidLogger is a wrapper of {@link Log}
  * But more pretty, simple and powerful
- *
+ * 原名为Logger,因避免与java里的Logger冲突，故改名如此
  * @author Orhan Obut
  */
 public final class AndroidLogger {

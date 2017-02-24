@@ -15,6 +15,8 @@ import com.base.model.Model;
 import com.base.util.ActivityStackManager;
 import com.base.view.View;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
+import com.util.AndroidLogger;
+import com.util.KeyboardUtils;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
@@ -22,7 +24,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Logger;
 
 import butterknife.ButterKnife;
 import io.reactivex.Flowable;
