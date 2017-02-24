@@ -88,7 +88,7 @@ public final class NetworkUtils {
                 return false;
             case TelephonyManager.NETWORK_TYPE_GPRS:     //2G
                 return false;
-            case TelephonyManager.NETWORK_TYPE_EVDO_A:
+            case TelephonyManager.NETWORK_TYPE_EVDO_A:   //3G
                 return true;
             case TelephonyManager.NETWORK_TYPE_EVDO_0:   //3G
                 return true;
@@ -104,7 +104,7 @@ public final class NetworkUtils {
                 return true;
             case TelephonyManager.NETWORK_TYPE_EVDO_B:   //3G
                 return true;
-            case TelephonyManager.NETWORK_TYPE_HSPAP:
+            case TelephonyManager.NETWORK_TYPE_HSPAP:    //3G
                 return true;
             case TelephonyManager.NETWORK_TYPE_LTE:      //4G
                 return true;
