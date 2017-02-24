@@ -11,7 +11,7 @@ import android.telephony.TelephonyManager;
  */
 public final class NetworkUtils {
     public static final String NETWORK_TYPE_WIFI = "wifi";
-    public static final String NETWORK_TYPE_3G = "3g";
+    public static final String NETWORK_TYPE_FASTMOBILENETWORK = "fast_mobile_network";
     public static final String NETWORK_TYPE_2G = "2g";
     public static final String NETWORK_TYPE_WAP = "wap";
     public static final String NETWORK_TYPE_UNKNOWN = "unknown";
@@ -53,14 +53,15 @@ public final class NetworkUtils {
         NetworkInfo networkInfo;
         String type = NETWORK_TYPE_DISCONNECT;
         if (manager == null || (networkInfo = manager.getActiveNetworkInfo()) == null) return type;
-
         if (networkInfo.isConnected()) {
             String typeName = networkInfo.getTypeName();
             if ("WIFI".equalsIgnoreCase(typeName))
                 type = NETWORK_TYPE_WIFI;
             else if ("MOBILE".equalsIgnoreCase(typeName))
-                type = StringUtils.isEmpty(android.net.Proxy.getDefaultHost()) ?
-                        (isFastMobileNetwork(context) ? NETWORK_TYPE_3G : NETWORK_TYPE_2G) : NETWORK_TYPE_WAP;
+                //获取默认代理主机后判断网络类型
+                type = StringUtils.isEmpty(android.net.Proxy.getDefaultHost())
+                        ? (isFastMobileNetwork(context) ? NETWORK_TYPE_FASTMOBILENETWORK : NETWORK_TYPE_2G)
+                        : NETWORK_TYPE_WAP;
             else
                 type = NETWORK_TYPE_UNKNOWN;
         }
@@ -68,7 +69,7 @@ public final class NetworkUtils {
     }
 
     /**
-     * 是否快速移动网络
+     * 是否快速移动网络：3G、4G即为快速移动网络
      *
      * @param context context
      * @return 是否快速移动网络
