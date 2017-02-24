@@ -5,7 +5,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.util.Logger;
+import com.util.AndroidLogger;
 
 
 /**
@@ -27,7 +27,7 @@ public class InnerGridLayoutManager extends GridLayoutManager {
     @Override
     public void onMeasure(RecyclerView.Recycler recycler, RecyclerView.State state, int widthSpec, int heightSpec) {
         int height = 0;
-        Logger.i("onMeasure---MeasureSpec-" + View.MeasureSpec.getSize(heightSpec));
+        AndroidLogger.i("onMeasure---MeasureSpec-" + View.MeasureSpec.getSize(heightSpec));
         int childCount = getItemCount();
         for (int i = 0; i < childCount; i++) {
             View child = recycler.getViewForPosition(i);
@@ -37,7 +37,7 @@ public class InnerGridLayoutManager extends GridLayoutManager {
                 height += measuredHeight;
             }
         }
-        Logger.i("onMeasure---height-" + height);
+        AndroidLogger.i("onMeasure---height-" + height);
         setMeasuredDimension(View.MeasureSpec.getSize(widthSpec), height);
 //        final int widthMode = View.MeasureSpec.getMode(widthSpec);
 //        final int heightMode = View.MeasureSpec.getMode(heightSpec);

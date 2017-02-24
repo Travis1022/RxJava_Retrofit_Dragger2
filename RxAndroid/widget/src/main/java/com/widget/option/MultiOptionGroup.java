@@ -1,4 +1,4 @@
-package com.widget;
+package com.widget.option;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -8,6 +8,7 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
 import com.sunnybear.library.util.DensityUtil;
+import com.widget.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;

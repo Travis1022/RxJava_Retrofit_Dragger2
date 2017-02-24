@@ -8,14 +8,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 
-import com.sunnybear.library.widget.R;
-import com.sunnybear.library.widget.recycler.adapter.BasicAdapter;
-import com.sunnybear.library.widget.recycler.layoutmanager.InnerGridLayoutManager;
-import com.sunnybear.library.widget.recycler.layoutmanager.InnerLinearLayoutManager;
-import com.sunnybear.library.widget.recycler.listener.OnItemClickListener;
-import com.sunnybear.library.widget.recycler.listener.OnItemLongClickListener;
+import com.widget.R;
+import com.widget.recycler.layoutmanager.InnerGridLayoutManager;
+import com.widget.recycler.layoutmanager.InnerLinearLayoutManager;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import com.yqritc.recyclerviewflexibledivider.VerticalDividerItemDecoration;
+
+mport com.widget.R;
+        i
 
 /**
  * 提供基本处理的RecyclerView
