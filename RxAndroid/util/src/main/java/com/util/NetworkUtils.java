@@ -10,9 +10,9 @@ import android.telephony.TelephonyManager;
  * Created by Travis1022 on 2017/2/24.
  */
 public final class NetworkUtils {
-    public static final String NETWORK_TYPE_WIFI = "wifi";
-    public static final String NETWORK_TYPE_FASTMOBILENETWORK = "fast_mobile_network";
-    public static final String NETWORK_TYPE_2G = "2g";
+    public static final String NETWORK_TYPE_WIFI = "wifi";       //wifi
+    public static final String NETWORK_TYPE_TRAFFIC = "traffic"; //快速移动网络 3G,4G
+    public static final String NETWORK_TYPE_2G = "2g";           //2G
     public static final String NETWORK_TYPE_WAP = "wap";
     public static final String NETWORK_TYPE_UNKNOWN = "unknown";
     public static final String NETWORK_TYPE_DISCONNECT = "disconnect";
@@ -60,7 +60,7 @@ public final class NetworkUtils {
             else if ("MOBILE".equalsIgnoreCase(typeName))
                 //获取默认代理主机后判断网络类型
                 type = StringUtils.isEmpty(android.net.Proxy.getDefaultHost())
-                        ? (isFastMobileNetwork(context) ? NETWORK_TYPE_FASTMOBILENETWORK : NETWORK_TYPE_2G)
+                        ? (isFastMobileNetwork(context) ? NETWORK_TYPE_TRAFFIC : NETWORK_TYPE_2G)
                         : NETWORK_TYPE_WAP;
             else
                 type = NETWORK_TYPE_UNKNOWN;
