@@ -1,10 +1,8 @@
 apply plugin: 'com.android.library'
-//lambda插件
-apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.1"
+    buildToolsVersion "25.0.2"
 
     defaultConfig {
         minSdkVersion 15
@@ -21,10 +19,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
 }
 
 dependencies {
@@ -32,10 +26,6 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.jakewharton:butterknife:7.0.1'
-    compile 'com.trello:rxlifecycle-components:0.4.0'
-    compile 'com.android.support:appcompat-v7:25.1.0'
-    compile "io.reactivex.rxjava2:rxjava:2.0.0"
+    compile 'com.android.support:appcompat-v7:25.2.0'
     testCompile 'junit:junit:4.12'
-    compile project(path: ':util')
 }

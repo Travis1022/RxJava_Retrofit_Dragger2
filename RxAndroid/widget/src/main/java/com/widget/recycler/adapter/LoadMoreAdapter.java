@@ -4,8 +4,6 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.sunnybear.library.widget.recycler.BasicViewHolder;
-
 import java.io.Serializable;
 import java.util.List;
 
@@ -13,7 +11,7 @@ import java.util.List;
  * 加载更多适配器
  * Created by guchenkai on 2015/12/3.
  */
-public abstract class LoadMoreAdapter<Item extends Serializable, VH extends BasicViewHolder> extends BasicAdapter<Item, VH> {
+public abstract class LoadMoreAdapter<Item extends Serializable, VH extends QuickViewHolder> extends QuickAdapter<Item, VH> {
     private static final int TYPE_FOOTER = 0xBB;
 
     private int mFooterSize = 0;
@@ -80,7 +78,7 @@ public abstract class LoadMoreAdapter<Item extends Serializable, VH extends Basi
     /**
      * 尾部视图
      */
-    static class FooterViewHolder extends BasicViewHolder<String> {
+    static class FooterViewHolder extends QuickViewHolder<String> {
 
         public FooterViewHolder(View itemView) {
             super(itemView);

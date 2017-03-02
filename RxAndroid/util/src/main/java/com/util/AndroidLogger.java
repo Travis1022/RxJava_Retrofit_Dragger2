@@ -8,12 +8,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Logger is a wrapper of {@link Log}
+ * AndroidLogger is a wrapper of {@link Log}
  * But more pretty, simple and powerful
- *
+ * 原名为Logger,因避免与java里的Logger冲突，故改名如此
  * @author Orhan Obut
  */
-public final class Logger {
+public final class AndroidLogger {
 
     /**
      * Android's max limit for a log entry is ~4076 bytes,
@@ -57,7 +57,7 @@ public final class Logger {
     private static String TAG = "PRETTYLOGGER";
 
     //no instance
-    private Logger() {
+    private AndroidLogger() {
     }
 
     /**
@@ -72,14 +72,14 @@ public final class Logger {
     /**
      * It is used to change the tag
      *
-     * @param tag is the given string which will be used in Logger
+     * @param tag is the given string which will be used in AndroidLogger
      */
     public static Settings init(String tag) {
         if (tag == null)
             throw new NullPointerException("tag may not be null");
         if (tag.trim().length() == 0)
             throw new IllegalStateException("tag may not be empty");
-        Logger.TAG = tag;
+        AndroidLogger.TAG = tag;
         return settings;
     }
 

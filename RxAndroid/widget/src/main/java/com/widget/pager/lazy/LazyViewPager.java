@@ -6,11 +6,12 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 
-import com.sunnybear.library.widget.R;
+import com.widget.R;
+
 
 /**
  * 懒加载ViewPager
- * Created by chenkai.gu on 2016/12/28.
+ * Created by Travis1022 on 2017/2/24
  */
 public class LazyViewPager extends ViewPager {
     private static final float DEFAULT_OFFSET = 0.5f;

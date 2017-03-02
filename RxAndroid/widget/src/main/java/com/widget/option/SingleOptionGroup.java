@@ -1,4 +1,4 @@
-package com.widget;
+package com.widget.option;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -9,9 +9,10 @@ import android.util.AttributeSet;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.sunnybear.library.util.DensityUtil;
-import com.sunnybear.library.util.Logger;
-import com.sunnybear.library.util.StringUtils;
+import com.util.AndroidLogger;
+import com.util.DensityUtil;
+import com.util.StringUtils;
+import com.widget.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,7 +20,7 @@ import java.util.List;
 
 /**
  * 单选选择器
- * Created by chenkai.gu on 2016/10/11.
+ * Created by Travis1022 on 2017/02/24.
  */
 public class SingleOptionGroup extends RadioGroup implements RadioGroup.OnCheckedChangeListener {
     private static final String TAG = SingleOptionGroup.class.getSimpleName();
@@ -109,7 +110,6 @@ public class SingleOptionGroup extends RadioGroup implements RadioGroup.OnChecke
     public void setDefaultOptions(int options) {
         RadioButton button = mRadioButtons.get(options);
         button.setChecked(true);
-//        postInvalidate();
     }
 
     private List<Integer> mCanBeChooseOptionsList = new ArrayList<>();
@@ -141,15 +141,16 @@ public class SingleOptionGroup extends RadioGroup implements RadioGroup.OnChecke
     }
 
     public void removeAllCanNotBeChooseOptions() {
-        for (int option : mCanBeChooseOptionsList)
+        for (int option : mCanBeChooseOptionsList) {
             mRadioButtons.get(option).setEnabled(false);
+        }
         mCanBeChooseOptionsList.clear();
     }
 
     @Override
     public final void onCheckedChanged(RadioGroup group, int checkedId) {
         option = options.get(checkedId);
-        Logger.d(TAG, "选择的选项:" + option);
+        AndroidLogger.d(TAG, "选择的选项:" + option);
         if (mOnSingleSelectedListener != null && !StringUtils.isEmpty(option))
             mOnSingleSelectedListener.onSingleSelected(checkedId, option);
     }

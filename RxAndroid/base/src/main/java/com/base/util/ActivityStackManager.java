@@ -8,13 +8,13 @@ import java.util.Stack;
 /**
  * Created by Travis1022 on 2017/2/23.
  */
-public class ActivityManager {
+public class ActivityStackManager {
     //activity管理栈
     private volatile Stack<Activity> activityStack;
     //全局单例
-    private static volatile ActivityManager instance;
+    private static volatile ActivityStackManager instance;
 
-    public ActivityManager() {
+    public ActivityStackManager() {
         activityStack = new Stack<>();
     }
 
@@ -23,11 +23,11 @@ public class ActivityManager {
      *
      * @return ActivityManager实例
      */
-    public static ActivityManager getInstance() {
+    public static ActivityStackManager getInstance() {
         if (instance == null)
-            synchronized (ActivityManager.class) {
+            synchronized (ActivityStackManager.class) {
                 if (instance == null)
-                    instance = new ActivityManager();
+                    instance = new ActivityStackManager();
             }
         return instance;
     }
