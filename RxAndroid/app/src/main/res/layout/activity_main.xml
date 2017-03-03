@@ -51,4 +51,16 @@
         android:layout_height="50dp"
         android:text="android基础"
         />
+
+    <Button
+        android:id="@+id/btn_library"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="使用框架"/>
+
+    <Button
+        android:id="@+id/btn_fashion"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="流行框架"/>
 </LinearLayout>
