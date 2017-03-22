@@ -4,11 +4,28 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
+
+    <Button
+        android:id="@+id/btn_activity"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="四大组件"
-        android:textSize="26sp"/>
+        android:layout_height="wrap_content"
+        android:text="Activity"/>
+
+    <Button
+        android:id="@+id/btn_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service"/>
+
+    <Button
+        android:id="@+id/btn_cast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BroadCast"/>
+
+    <Button
+        android:id="@+id/btn_provider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ContentProvider"/>
 </LinearLayout>
