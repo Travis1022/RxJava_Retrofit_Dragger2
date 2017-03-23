@@ -1,15 +1,39 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.rxandroid.fragment.DataFragment">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="16dp"
+              tools:context="com.rxandroid.fragment.DataFragment">
 
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/btn_sharePreference"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="测试数据"
-        android:textSize="26sp"/>
+        android:layout_height="wrap_content"
+        android:text="SharePreferences"/>
 
-</FrameLayout>
+    <Button
+        android:id="@+id/btn_sqlite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SQlite"/>
+
+    <Button
+        android:id="@+id/btn_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="文件存储数据"/>
+
+    <Button
+        android:id="@+id/btn_content_provider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ContentProvider"/>
+
+    <Button
+        android:id="@+id/btn_network_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网络存储"/>
+
+</LinearLayout>

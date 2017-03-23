@@ -14,6 +14,7 @@ import com.rxandroid.R;
 import com.rxandroid.fragment.ComponentFragment;
 import com.rxandroid.fragment.DataFragment;
 import com.rxandroid.fragment.GeneralFragment;
+import com.rxandroid.fragment.NetWorkFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,24 +53,27 @@ public class LearnAndroidActivity extends AppCompatActivity {
                     return Fragment.instantiate(LearnAndroidActivity.this, ComponentFragment.class.getName());
                 } else if (position == 1) {
                     return Fragment.instantiate(LearnAndroidActivity.this, DataFragment.class.getName());
+                } else if (position == 2) {
+                    return Fragment.instantiate(LearnAndroidActivity.this, NetWorkFragment.class.getName());
                 } else {
-                    return fragmentList.get(position - 2);
+                    return fragmentList.get(position - 3);
                 }
             }
 
             @Override
             public int getCount() {
-                return 2 + fragmentList.size();
+                return 3 + fragmentList.size();
             }
         };
         mVpShow.setAdapter(mAdapter);
-        mVpShow.setOffscreenPageLimit(fragmentList.size() + 2);
+        mVpShow.setOffscreenPageLimit(fragmentList.size() + 3);
         mTabShow.setupWithViewPager(mVpShow);
         //设置tab名
         mTabShow.getTabAt(0).setText("四大组件");
         mTabShow.getTabAt(1).setText("数据存储");
+        mTabShow.getTabAt(2).setText("网络请求");
         for (int i = 0; i < titleList.size(); i++) {
-            mTabShow.getTabAt(i + 2).setText(titleList.get(i));
+            mTabShow.getTabAt(i + 3).setText(titleList.get(i));
         }
     }
 
