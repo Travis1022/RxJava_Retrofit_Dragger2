@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @OnClick({R.id.btn_simple, R.id.btn_more, R.id.btn_lambda,
             R.id.btn_network, R.id.btn_safe, R.id.btn_binding,
-            R.id.btn_android})
+            R.id.btn_android, R.id.btn_view})
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -50,7 +50,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_android:
                 LearnAndroid();
                 break;
+
+            case R.id.btn_view:
+                showMyView();
+                break;
         }
+    }
+
+    //自定义View
+    private void showMyView() {
+        startActivity(new Intent(this, MyViewActivity.class));
     }
 
 

@@ -5,62 +5,88 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp"
     tools:context="com.rxandroid.activity.MainActivity">
 
-    <Button
-        android:id="@+id/btn_simple"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="简单使用"/>
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_more"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="更多使用"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
 
-    <Button
-        android:id="@+id/btn_lambda"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Lambda使用"/>
+            <Button
+                android:id="@+id/btn_simple"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="1.简单使用"/>
 
-    <Button
-        android:id="@+id/btn_network"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="网络使用"/>
+            <Button
+                android:id="@+id/btn_more"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="2.更多使用"/>
 
-    <Button
-        android:id="@+id/btn_safe"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="线程安全"/>
+            <Button
+                android:id="@+id/btn_lambda"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="3.Lambda使用"/>
 
-    <Button
-        android:id="@+id/btn_binding"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="RxBinding"/>
+            <Button
+                android:id="@+id/btn_network"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="4.Http请求"/>
 
-    <Button
-        android:id="@+id/btn_android"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="android基础"
-        />
+            <Button
+                android:id="@+id/btn_safe"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="5.线程安全"/>
 
-    <Button
-        android:id="@+id/btn_library"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="使用框架"/>
+            <Button
+                android:id="@+id/btn_binding"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="6.RxBinding"/>
 
-    <Button
-        android:id="@+id/btn_fashion"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="流行框架"/>
+            <Button
+                android:id="@+id/btn_android"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="android基础"
+                />
+
+            <Button
+                android:id="@+id/btn_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="自定义View"/>
+
+            <Button
+                android:id="@+id/btn_tcp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="TCP/UDP通信"/>
+
+            <Button
+                android:id="@+id/btn_library"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="使用框架"/>
+
+            <Button
+                android:id="@+id/btn_fashion"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="流行框架"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
 </LinearLayout>
