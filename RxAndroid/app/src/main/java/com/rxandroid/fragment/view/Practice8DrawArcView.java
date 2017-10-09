@@ -2,11 +2,19 @@ package com.rxandroid.fragment.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.os.Build;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
+
+/**
+ * 绘制扇形和弧形
+ */
 public class Practice8DrawArcView extends View {
+
+    private Paint mPaint;
 
     public Practice8DrawArcView(Context context) {
         super(context);
@@ -24,6 +32,11 @@ public class Practice8DrawArcView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-//        练习内容：使用 canvas.drawArc() 方法画弧形和扇形
+
+        // 绘制扇形 和弧形
+        mPaint = new Paint();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            canvas.drawArc(100, 100, 200, 200, 60f, 120f, true, mPaint);
+        }
     }
 }
