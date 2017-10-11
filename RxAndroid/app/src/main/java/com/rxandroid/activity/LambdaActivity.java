@@ -2,7 +2,6 @@ package com.rxandroid.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,7 +18,7 @@ import rx.android.schedulers.AndroidSchedulers;
 /**
  * Created by Travis1022 on 2017/2/8.
  */
-public class LambdaActivity extends AppCompatActivity {
+public class LambdaActivity extends BasicActivity {
     @Bind(R.id.tv_simple)
     TextView mTvSimple;
     final String[] mStrings = {"Hello", "I", "am", "your", "friend", "Travis1022"};

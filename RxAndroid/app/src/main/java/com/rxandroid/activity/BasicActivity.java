@@ -1,17 +1,16 @@
 package com.rxandroid.activity;
 
 import android.os.Bundle;
-
-import com.rxandroid.R;
+import android.support.v7.app.AppCompatActivity;
 
 /**
- * 网络通信
+ * Activity基类
  */
-public class TcpActivity extends BasicActivity {
+public class BasicActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tcp);
     }
+
 }

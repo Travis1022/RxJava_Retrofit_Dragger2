@@ -2,7 +2,6 @@ package com.rxandroid.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -17,7 +16,7 @@ import butterknife.ButterKnife;
  * RxAndroid在网络请求上的应用
  * Created by Travis1022 on 2017/2/7.
  */
-public class NetWorkActivity extends AppCompatActivity {
+public class NetWorkActivity extends BasicActivity {
 
     @Bind(R.id.rv_show)
     RecyclerView mRvShow;

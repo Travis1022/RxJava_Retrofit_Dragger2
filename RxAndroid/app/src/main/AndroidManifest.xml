@@ -4,6 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
+    <!-- 网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:name=".GlobalApplication"
         android:allowBackup="true"
@@ -47,6 +50,10 @@
         <activity android:name=".activity.MyViewActivity">
         </activity>
         <activity android:name=".activity.TcpActivity">
+        </activity>
+        <activity
+            android:name=".activity.BasicActivity"
+            android:label="@string/title_activity_basic">
         </activity>
     </application>
 

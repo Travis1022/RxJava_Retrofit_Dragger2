@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.util.SparseArray;
 
 import com.rxandroid.R;
@@ -27,7 +26,7 @@ import butterknife.ButterKnife;
  * 根据数据来确定Fragment的个数
  * Created by Travis on 2017/2/23.
  */
-public class LearnAndroidActivity extends AppCompatActivity {
+public class LearnAndroidActivity extends BasicActivity {
     @Bind(R.id.tab_show)
     TabLayout mTabShow;
     @Bind(R.id.vp_show)

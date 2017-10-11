@@ -2,7 +2,6 @@ package com.rxandroid.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +17,7 @@ import rx.android.schedulers.AndroidSchedulers;
  * 简单的RxAndroid使用方法
  * Created by Travis1022 on 2017/2/7.
  */
-public class SimpleActivity extends AppCompatActivity {
+public class SimpleActivity extends BasicActivity {
 
     @Bind(R.id.tv_simple)
     TextView mTvSimple;

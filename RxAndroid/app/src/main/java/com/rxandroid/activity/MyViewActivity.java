@@ -7,7 +7,6 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 
 import com.rxandroid.R;
 import com.rxandroid.fragment.PageFragment;
@@ -22,7 +21,7 @@ import butterknife.ButterKnife;
  * 自定义view
  * Create by Travis1022 on 2017-10-09
  */
-public class MyViewActivity extends AppCompatActivity {
+public class MyViewActivity extends BasicActivity {
 
     @Bind(R.id.tab_view)
     TabLayout mTabView;    //Tab

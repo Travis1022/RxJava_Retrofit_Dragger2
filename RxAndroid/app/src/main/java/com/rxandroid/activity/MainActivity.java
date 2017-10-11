@@ -2,7 +2,6 @@ package com.rxandroid.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.rxandroid.R;
@@ -14,7 +13,7 @@ import butterknife.OnClick;
  * RxAndroid的使用
  * Created by Travis1022 on 2017/2/7.
  */
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends BasicActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

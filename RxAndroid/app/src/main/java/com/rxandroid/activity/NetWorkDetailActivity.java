@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -19,7 +18,7 @@ import butterknife.ButterKnife;
 /**
  * Created by Travis1022 on 2017/2/8.
  */
-public class NetWorkDetailActivity extends AppCompatActivity {
+public class NetWorkDetailActivity extends BasicActivity {
     @Bind(R.id.rv_show)
     RecyclerView mRvShow;
     private static final String userNameTag = "user_name";
