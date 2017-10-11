@@ -6,7 +6,7 @@
 
     <!-- 网络状态 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <application
         android:name=".GlobalApplication"
         android:allowBackup="true"
@@ -55,6 +55,15 @@
             android:name=".activity.BasicActivity"
             android:label="@string/title_activity_basic">
         </activity>
+
+        <!--监听网络状态-->
+        <receiver android:name=".receiver.NetWorkChangReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
